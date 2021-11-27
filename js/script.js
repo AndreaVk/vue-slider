@@ -26,6 +26,9 @@ const app = new Vue({
                 this.currentImg--;
             }
             
+        },
+        selettoreImg: function(index){
+            this.currentImg = index;
         }
     },
 

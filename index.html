@@ -30,7 +30,7 @@
             <!-- icona freccia in su -->
             <i id="up" class="fas fa-chevron-circle-up" @click="prevImage()"></i>
             <!-- thumbnail -->
-            <div class="sm-img-item" v-for="(image,index) in images" :class="index == currentImg ? 'active' : '' ">
+            <div class="sm-img-item" v-for="(image,index) in images" :class="index == currentImg ? 'active' : '' " @click="selettoreImg(index)">
             <img class="sm-img" :src="image" alt="">
             </div>
             <i id="down" class="fas fa-chevron-circle-down" @click="nextImage()"></i>
