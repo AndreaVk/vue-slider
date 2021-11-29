@@ -22,7 +22,11 @@
         <div id="big-img-container">
             <!-- thumbnail -->
             <div class="big-img-item">
-            <img class="big-img" :src="images[currentImg]" alt="">
+            <img class="big-img" :src="images[currentImg].image" alt="">
+            <div class="text-container">
+                <h2>{{images[currentImg].title}}</h2>
+                <p>{{images[currentImg].text}}</p>
+            </div>
             </div>
         </div>
         <!-- container a destra con thumbnails -->
@@ -31,7 +35,7 @@
             <i id="up" class="fas fa-chevron-circle-up" @click="prevImage()"></i>
             <!-- thumbnail -->
             <div class="sm-img-item" v-for="(image,index) in images" :class="index == currentImg ? 'active' : '' " @click="selettoreImg(index)">
-            <img class="sm-img" :src="image" alt="">
+            <img class="sm-img" :src="image.image" alt="">
             </div>
             <i id="down" class="fas fa-chevron-circle-down" @click="nextImage()"></i>
         </div>
